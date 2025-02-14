@@ -1,0 +1,27 @@
+Including a .jar file allows our program to be run with only TWO files (APP_RunServer.jar, RootDir)
+
+
+------------Execute The Below in a terminal to Create .jar-----------
+
+javac *.java ; jar cfm APP_RunServer.jar ClassManifest.mf *.class ; rm *.class ; echo "Completed Update"
+
+---------------------------------------------------------------------
+
+The above^ works as follows:
+1) javac *.java; --> compile all files ending in .java into .class files
+2) jar cfm APP_RunServer.jar ClassManifest.mf *.class; --> create (c) a named jar file (f) using the manifest specified (m) to denote the main class location, packing all .class files (*.class) into the .jar executable
+3) rm *.class; --> Clean up directory by removing the .class files
+4) Print the statement "Completed Update" to the terminalas a friendly note :)
+
+
+If you want to run the .jar from terminal (instead of double-clicking the application):
+--> java -jar APP_RunServer.jar
+
+
+At this point, as long as App_RunServer.jar and RootDir are in the same directory, they are all that is needed to run the server---and can be moved wherever.
+
+
+
+
+
+
